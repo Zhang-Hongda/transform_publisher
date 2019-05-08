@@ -40,4 +40,5 @@ The interface should look like this:
 * The "__tf publisher__" panel
     * Users can specify the __frame_id__ and __child frame_id__ for the messages publisher.
     * Modify the values in __x__,__y__,__z__,__row__,__pitch__,__yaw__ to change the tf messages.
+    * Click on "__publish__" button to publish tf messages.
 
