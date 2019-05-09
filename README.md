@@ -1,7 +1,7 @@
 transform_publisher
 ==============================
 ****
-|Author|ZhangHongda|
+|Author|Zhang Hongda|
 |------|-----------------|
 |E-mail|2210010444@qq.com|
 |Institute|Harbin Institute of Technology|
