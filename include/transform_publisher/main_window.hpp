@@ -49,7 +49,9 @@ class MainWindow : public QMainWindow {
   void on_actionAbout_triggered();
   void on_button_connect_clicked(bool check);
   void on_checkbox_use_environment_stateChanged(int state);
-
+  void disableAllwidgets();
+  void enableAllwidgets();
+  
  private Q_SLOTS:
   void on_lineEdit_frame_id_editingFinished();
   void on_lineEdit_child_frame_id_editingFinished();

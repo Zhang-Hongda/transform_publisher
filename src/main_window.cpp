@@ -80,7 +80,16 @@ MainWindow::MainWindow(int argc, char **argv, QWidget *parent) : QMainWindow(par
 
   ReadSettings();
   setWindowIcon(QIcon(":/images/icon.png"));
-  ui.tab_manager->setCurrentIndex(0);  // ensure the first tab is showing -
+  ui.tab_manager->setCurrentIndex(0);  // ensure the first tab is showing -  
+  disableAllwidgets();
+  /*********************
+  ** Eable Gui
+  **********************/
+  QObject::connect(&qnode, SIGNAL(nodeReady()), this,
+                   SLOT(enableAllwidgets()));
+  /*********************
+  ** Shut Down
+  **********************/
   QObject::connect(&qnode, SIGNAL(rosShutdown()), this, SLOT(close()));
   /*********************
   ** Auto Start
@@ -165,8 +174,8 @@ void MainWindow::on_checkbox_use_environment_stateChanged(int state)
 
 void MainWindow::on_actionAbout_triggered()
 {
-  QMessageBox::about(this, tr("About ..."), tr("<h2>PACKAGE_NAME Test Program 0.10</h2><p>Copyright Yujin "
-                                               "Robot</p><p>This package needs an about description.</p>"));
+  QMessageBox::about(this, tr("About ..."), tr("<h2>PACKAGE_NAME transform_publisher </h2><p>Copyright Eric Zhang </p><p>An "
+         "application for publishing tf.</p>"));
 }
 
 /*****************************************************************************
@@ -307,3 +316,13 @@ void transform_publisher::MainWindow::on_doubleSpinBox_y_2_editingFinished()
 {
   updateTransform();
 }
+
+void transform_publisher::MainWindow::disableAllwidgets(){
+  ui.groupBox_tf->setEnabled(false);
+}
+
+void transform_publisher::MainWindow::enableAllwidgets(){
+  ui.groupBox_tf->setEnabled(true);
+  ui.pushButton_publish->setChecked(true);
+}
+

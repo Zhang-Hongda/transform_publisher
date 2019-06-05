@@ -53,6 +53,7 @@ class QNode : public QThread {
 Q_SIGNALS:
   void loggingUpdated();
   void rosShutdown();
+  void nodeReady();
 
  private:
   int init_argc;

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>830</width>
-    <height>383</height>
+    <height>434</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -48,7 +48,7 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QGroupBox" name="groupBox_2">
+         <widget class="QGroupBox" name="groupBox_tf">
           <property name="title">
            <string>tf</string>
           </property>
@@ -373,14 +373,13 @@
      <x>0</x>
      <y>0</y>
      <width>830</width>
-     <height>23</height>
+     <height>31</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
     <property name="title">
-     <string>&amp;App</string>
+     <string>Menu</string>
     </property>
-    <addaction name="action_Preferences"/>
     <addaction name="separator"/>
     <addaction name="actionAbout"/>
     <addaction name="actionAbout_Qt"/>
@@ -400,7 +399,7 @@
    <property name="minimumSize">
     <size>
      <width>325</width>
-     <height>337</height>
+     <height>375</height>
     </size>
    </property>
    <property name="allowedAreas">

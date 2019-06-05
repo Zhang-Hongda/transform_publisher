@@ -127,6 +127,8 @@ void QNode::update(std::string _frame_id, std::string _childframe_id, tf::Transf
 void QNode::run()
 {
   ros::Rate loop_rate(10.0);
+  Q_EMIT
+  nodeReady();
   while (ros::ok())
   {
     tf::Transform t = readtransform();
